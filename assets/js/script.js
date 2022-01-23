@@ -126,30 +126,17 @@ var pokemonTypes = [
   var userPokeChoice = []; //pick 6 random from typeMasterArray
   var currentWeather, currentPlus, currentNegative, currentWeatherIndex;
   
-  // ATTEMPT TO LOAD JAVASCRIPT DATA FROM EXTERNAL SOURCE - ASK PROF?!!
-  // function LoadScript() {
-  //     $.getScript("assets\scriptFromBen.js", function(script, status, jqxhr) {
-  //     console.log(status);
-  //     });
-  // }
-  // LoadScript ();
-  //Input autocomplete for location
-  // document.addEventListener('DOMContentLoaded', function() {
-  //     var elems = document.querySelectorAll('.autocomplete');
-  //     var instances = M.Autocomplete.init(elems, options);
-  //   });
-  
   //console.log('hello this is the script correctly linked');
   
-  apiKey = '79ae4c44176953beec1155138bc60d35'
-  var cityName = '';
-  var latitude = '';
-  var longitude = '';
-  var recentSearches = [];
-  var battlePage = 'battleFromBen.html';
+apiKey = '79ae4c44176953beec1155138bc60d35'
+var cityName = '';
+var latitude = '';
+var longitude = '';
+var recentSearches = [];
+var battlePage = 'battleFromBen.html';
   //var requestUrl = "api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=79ae4c44176953beec1155138bc60d35";
   // redirectUrl =
-  function getCityWeather() {
+function getCityWeather() {
     var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=imperial&appid=' + apiKey
     //FETCHING THE WEATHER BASED OFF CITY NAME
     fetch(url)
