@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/style/materialize.min.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+
+
+    <title>PokeWeather</title>
+</head>
+
+<body>
+    <section>
+
+        <div class="clouds">
+            <div class="cloud">
+                <p>Poké- <br> Weather</p>
+            </div>
+            <div class="cloud2">
+                <p>
+                    Enter a real world location for battle! Then choose which day you would like to battle!
+                    Then choose your pokemon! Keep in mind real time weather will effect
+                    your pokémon's chances of becoming a CHAMPION!
+                </p>
+                <!-- <div class="addedCloud">
+
+                </div> -->
+            </div>
+
+            <div class="cloud3">
+                <!-- former d class location and wrap-->
+                <div id="cloud3Search">
+                    <div id="wrap">
+                        <p>Press Enter</p>
+                        <form id="city-form">
+                            <label for="autocomplete-input"></label>
+                            <input type="text" id="autocomplete-input" class="autocomplete" class="citySearch"
+                                placeholder="Enter location...">
+
+                            <button id="searchBtn" type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--two sect's prevents conflicts while adjusting screen size -->
+    <section>
+
+        <div class="fiveDayForecast">
+            <!-- <div class='row col.m1 forecastRow'> -->
+            <div id="day0Card" class=" forecastCard card card-content white-text hide">
+                <span id="cityTitleCard" class="card-title"></span>
+                <p id="date0"></p>
+                <img id="iconImg0">
+                <p id="temp0"></p>
+                <p id="humidity0"></p>
+                <p id="windSpeed0"></p>
+                <p id="uvi0"></p>
+            </div>
+            <div id="day1Card" class="  forecastCard card  card-content white-text hide">
+                <span id="cityTitleCard" class="card-title"></span>
+                <p id="date1"></p>
+                <img id="iconImg1">
+                <p id="temp1"></p>
+                <p id="humidity1"></p>
+                <p id="windSpeed1"></p>
+                <p id="uvi1"></p>
+            </div>
+            <div id="day2Card" class="  forecastCard card  card-content white-text hide">
+                <span id="cityTitleCard" class="card-title"></span>
+                <p id="date2"></p>
+                <img id="iconImg2">
+                <p id="temp2"></p>
+                <p id="humidity2"></p>
+                <p id="windSpeed2"></p>
+                <p id="uvi2"></p>
+            </div>
+            <div id="day3Card" class="  forecastCard card card-content white-text hide">
+                <span id="cityTitleCard" class="card-title"></span>
+                <p id="date3"></p>
+                <img id="iconImg3">
+                <p id="temp3"></p>
+                <p id="humidity3"></p>
+                <p id="windSpeed3"></p>
+                <p id="uvi3"></p>
+            </div>
+            <div id="day4Card" class="  forecastCard card  card-content white-text hide">
+                <span id="cityTitleCard" class="card-title"></span>
+                <p id="date4"></p>
+                <img id="iconImg4">
+                <p id="temp4"></p>
+                <p id="humidity4"></p>
+                <p id="windSpeed4"></p>
+                <p id="uvi4"></p>
+            </div>
+
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <section>
+        <div class="pokemon">
+            <!-- <div class="card horizontal" id="pokeRow"> -->
+            <div id="pokeRow"> </div>
+        </div>
+    </section>
+
+    <!-- style of types with color backgrounds FROM SCRIPT.JS -->
+
+    <section>
+        <div class="battle">
+            <button onclick='battleTab()' class="waves-effect waves-light btn-large hide" id="battleButton"><i
+                    class="material-icons right"></i>Let's Battle</button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/js/materialize.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
