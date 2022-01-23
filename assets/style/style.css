@@ -1,5 +1,5 @@
 html {
-    background-image: url('assets\images\backgroundForecast.jpeg');
+    background-image: url(./backgroundForecast.jpeg);
     /* background-repeat: no-repeat; */
     /* background-size:cover; */
     min-height: 100%;
@@ -18,7 +18,7 @@ body section{
 
 @font-face {
     font-family: "pokeFont";
-    src: url('assets\fonts\PokemonGb-RAeo.ttf');
+    src: url('./PokemonGb-RAeo.ttf');
 }
 
 .clouds{
