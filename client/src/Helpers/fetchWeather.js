@@ -8,13 +8,13 @@ export default function getCityWeather() {
     //TODO: make this a string literal
     var url = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=imperial&appid=' + apiKey
     fetch(url)
-    .then(function (response) {
-            console.log(response);
-                return response.json();
-            })
-            .then(function (data) {
-                console.log("this is current weather", data);
-                // let iconData = data.weather[0].icon;
+        .then(function (response) {
+            // console.log(response);
+            return response.json();
+        })
+        .then(function (data) {
+            console.log("this is current weather", data);
+            // let iconData = data.weather[0].icon;
             //     var iconImg = $('<img>');
             //     $('#iconImg').addClass("card.small left")
             //     $('#iconImg').attr('src', 'https://openweathermap.org/img/wn/' + iconData + '@4x.png')
@@ -33,6 +33,6 @@ export default function getCityWeather() {
             //     save the cityName to local storage
             //     localStorage.setItem("cityName", data.name)
             //     pass the coordinates to other url call for Lat and lon??
-            return data;
-            });
+            return data.name;
+        });
 }
