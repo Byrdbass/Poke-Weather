@@ -21,6 +21,7 @@ export const WeatherProvider = ({ children }) => {
         
     })
 
+    //TODO : try to fit in other api call here 
     useEffect(() => {
         fetch(`${weatherToday.url}${weatherToday.cityName}&units=imperial&appid=${apiKey}`)
         .then(function (response) {
@@ -37,8 +38,19 @@ export const WeatherProvider = ({ children }) => {
         })
     }, [weatherToday.cityName])
 
+    //FUNCTIONS TO UPDATE PROVIDER VALUES
+    const updateCityName = (newCity) => {
+        setWeatherToday(prev => ({
+            ...prev, 
+            cityName: newCity
+        }))
+
+    }
+
+
     return <WeatherContext.Provider value = {{
-        weatherToday, setWeatherToday
+        weatherToday, setWeatherToday,
+        updateCityName
     }}>
         {children}
     </WeatherContext.Provider> 
