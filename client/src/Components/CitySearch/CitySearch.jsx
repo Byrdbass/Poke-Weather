@@ -4,7 +4,7 @@ import { useWeather } from '../../utils/WeatherProvider'
 
 export default function CitySearch() {
 
-    const [ newCity, setNewCity] = useState()
+    const [ newCity, setNewCity] = useState('')
     const { weatherToday, updateCityName } = useWeather();
 
     const handleNewCity = (e) => {
@@ -12,6 +12,12 @@ export default function CitySearch() {
     }
     const handleCityNameChange = () => {
         updateCityName(newCity);
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleCityNameChange();
+        }
     }
 
     return(
@@ -22,6 +28,7 @@ export default function CitySearch() {
             placeholder='Enter city name'
             value={newCity}
             onChange={handleNewCity}
+            onKeyDown={handleKeyDown}
             />
             <button className="city-search-btn"
             onClick={handleCityNameChange}
