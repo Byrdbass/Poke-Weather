@@ -13,7 +13,7 @@ export default function getCityWeather() {
             return response.json();
         })
         .then(function (data) {
-            console.log("this is current weather", data);
+            // console.log("this is current weather", data);
             // let iconData = data.weather[0].icon;
             //     var iconImg = $('<img>');
             //     $('#iconImg').addClass("card.small left")
