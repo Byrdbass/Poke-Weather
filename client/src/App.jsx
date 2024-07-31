@@ -10,8 +10,6 @@ function App() {
   return (
     <div className="background-home">
       <WeatherProvider >
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, amet autem harum debitis cum illum, esse ab fugiat asperiores voluptatibus dolores excepturi natus culpa architecto praesentium maiores itaque quod corrupti?
         <div className="button-div">
           <WeatherToday />
           <CitySearch />

@@ -5,15 +5,15 @@ import { useWeather } from '../../utils/WeatherProvider'
 export default function CitySearch() {
 
     const [ newCity, setNewCity] = useState('')
-    const { weatherToday, updateCityName } = useWeather();
+    const { updateCityName } = useWeather();
 
     const handleNewCity = (e) => {
         setNewCity(e.target.value);
     }
     const handleCityNameChange = () => {
         updateCityName(newCity);
+        setNewCity('')
     }
-
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             handleCityNameChange();
