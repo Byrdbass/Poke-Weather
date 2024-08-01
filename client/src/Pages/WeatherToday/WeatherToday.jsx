@@ -9,8 +9,7 @@ export default function WeatherToday() {
     const { weatherToday } = useWeather()
 
     const [cityNameCap, setCityNameCap] = useState(weatherToday.cityName)
-    // const [weatherData, setWeatherData] = useState()
-    // const [weatherIcon, setWeatherIcon] = useState('')
+
 
     //TODO: move to helper function and folder
     useEffect(() => {

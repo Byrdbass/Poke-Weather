@@ -9,6 +9,7 @@ export function useWeather() {
 
 export const WeatherProvider = ({ children }) => {
 
+    const [location, setLocation] = useState(null);
     const [weatherToday, setWeatherToday] = useState({
         url: 'https://api.openweathermap.org/data/2.5/weather?q=', //+ cityName + '&units=imperial&appid=' + apiKey,
         //TODO - default city name to grabbing someone's location
@@ -20,6 +21,22 @@ export const WeatherProvider = ({ children }) => {
         lon: '',
         
     })
+
+    useEffect(() => {
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(success, error)
+        }
+        else{
+            setLocation(weatherToday.cityName)
+        }
+        function success(location){
+            console.log(location)
+        }
+        function error() {
+            console.log("Unable to retrieve your location");
+          }
+    }, [])
+
 
     //TODO : try to fit in other api call here 
     useEffect(() => {
